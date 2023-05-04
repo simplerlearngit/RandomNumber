@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="myNumber" value="" placeholder="Enter a value">
+    <button onclick="myFunction()">click</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNumber").value;
+            x = parseInt(x);
+            if (x < 0) {
+                document.getElementById("demo").innerHTML = "Enter a positive value";
+            }
+            else if (x % 2 == 0) {
+                let arr = []
+                for (i = 0; i <= 2; ++i) {
+                    arr[i] = (x += 2)
+                    document.getElementById("demo").innerHTML = arr;
+                }
+            }
+            else if(isNaN(x)){
+                alert("Enter a value");
+            }
+            else if (x % 2 != 0) {
+                    let arr = []
+                    for (i = 0; i <= 2; ++i) {
+                        arr[i] = (x += 2)
+                        document.getElementById("demo").innerHTML = arr;
+                    }
+                }
+        }
+    </script>
+</body>
+
+</html>
